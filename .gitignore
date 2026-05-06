@@ -1,3 +1,6 @@
+# CDC certs
+.devcontainer/certs/
+
 checkpoints/
 dataset_csvs/
 # src/*.sh
