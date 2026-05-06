@@ -1,7 +1,7 @@
 from collections import OrderedDict
 import math
 import random
-from typing import Callable, Optional, Sequence, Tuple
+from typing import Callable, Optional
 
 import torch
 from torch import nn

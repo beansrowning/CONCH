@@ -1,12 +1,13 @@
 import logging
-import pdb
+
 from collections import OrderedDict
 
 import torch
 import torch.nn as nn
 
 from .transformer import AttentionalPooler
-from timm.models.layers import Mlp, to_2tuple
+from timm.layers.mlp import Mlp
+from timm.layers.helpers import to_2tuple
 
 from .utils import freeze_batch_norm_2d
 

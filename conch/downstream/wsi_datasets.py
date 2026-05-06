@@ -1,8 +1,10 @@
 import os
-from torch.utils.data import Dataset
+
 import h5py
 import numpy as np
 import torch
+from torch.utils.data import Dataset
+
 
 def infer_folder_structure(source, subdir_name):
     """infer the folder structure of the dataset."""

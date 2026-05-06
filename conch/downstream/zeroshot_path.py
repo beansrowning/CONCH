@@ -1,12 +1,17 @@
 import numpy as np
 import torch
 import torch.nn.functional as F
-import numpy as np
-from conch.open_clip_custom import tokenize, get_tokenizer
-from conch.downstream.utils import AverageMeter, merge_dict
-from sklearn.metrics import (balanced_accuracy_score, cohen_kappa_score, 
-                             classification_report, roc_auc_score)
+from sklearn.metrics import (
+    balanced_accuracy_score,
+    classification_report,
+    cohen_kappa_score,
+    roc_auc_score,
+)
 from tqdm import tqdm
+
+from conch.downstream.utils import AverageMeter, merge_dict
+from conch.open_clip_custom import get_tokenizer, tokenize
+
 
 @torch.no_grad()
 def zero_shot_classifier(model, classnames, templates, tokenizer=None, device=None):

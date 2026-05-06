@@ -1,11 +1,9 @@
 import os
-from typing import Union, List
 
 from pathlib import Path
 import torch.nn.functional as F
 from transformers import PreTrainedTokenizerFast
 
-import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 TOKENIZER_DIR = Path(__file__).parent / 'tokenizers'

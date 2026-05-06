@@ -1,14 +1,12 @@
 import json
-from copy import deepcopy
 from pathlib import Path
-from typing import Any, Dict, Optional, Tuple, Union
+from typing import Dict, Optional, Tuple, Union
 
 import torch
 
 from .constants import OPENAI_DATASET_MEAN, OPENAI_DATASET_STD
 from .coca_model import CoCa, resize_pos_embed
 from .transform import image_transform
-from functools import partial
 from huggingface_hub import hf_hub_download
 
 

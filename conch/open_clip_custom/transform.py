@@ -1,7 +1,6 @@
-from typing import Any, Dict, Optional, Sequence, Tuple, Union
+from typing import  Optional, Tuple
 
-from torchvision.transforms import Normalize, Compose, RandomResizedCrop, InterpolationMode, ToTensor, Resize, \
-    CenterCrop
+from torchvision.transforms import Normalize, Compose, InterpolationMode, ToTensor, Resize, CenterCrop
 
 from .constants import IMAGENET_DATASET_MEAN, IMAGENET_DATASET_STD
 
