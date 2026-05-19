@@ -5,7 +5,7 @@ FROM nvcr.io/nvidia/pytorch:26.01-py3
 
 COPY .devcontainer/certs/*.crt /usr/local/share/ca-certificates/
 
-# Install curl and CA certificates for downloading uv.
+# Install curl and CA certificates
 RUN apt-get update \
     && apt-get install -y --no-install-recommends ca-certificates curl \
     && update-ca-certificates \
