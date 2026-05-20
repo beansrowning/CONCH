@@ -1,5 +1,4 @@
+accelerate
+bitsandbytes
+peft
 python-dotenv
-timm>=0.9.8
-transformers
-ftfy
-h5py

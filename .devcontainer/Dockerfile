@@ -19,8 +19,13 @@ ENV NODE_EXTRA_CA_CERTS=/usr/local/share/ca-certificates/CDC-G2.crt
 # by the devcontainer, so dependency layers only need packaging metadata.
 WORKDIR /workspaces/CONCH
 
+# NOTE: Stub install to cache package dependencies for fast load
+COPY pyproject.toml .
+
 COPY requirements-extra.txt .
 
-RUN pip install --no-cache-dir \
-        --constraint /etc/pip/constraint.txt \
-        -r requirements-extra.txt
+RUN mkdir -p conch \
+    && touch conch/__init__.py \
+    && pip install --constraint /etc/pip/constraint.txt -e . \
+    && pip install --constraint /etc/pip/constraint.txt -r requirements-extra.txt \
+    && rm -rf 
